@@ -17,18 +17,16 @@ else
 echo -e "This username does not exist in records. You will have to add yourself to the usergroup manually.\n"
 fi
 
-echo "Downloading repository..."
-
 if [[ ! -d "overwitch" ]]; then
 
-cd "$HOME"
+echo "Downloading repository..."
+
 git clone https://github.com/dagargo/overwitch.git
 
 else 
-    read -p $'Overwitch directory already found. \n[Y] to delete existing folder and re-download into directory \n[N] to exit script  \n[S] to skip download and continue installation' ans
+    read -p $'Folder named 'overwitch' already found. \n[Y] to delete existing folder and re-download into directory \n[N] to exit script  \n[S] to skip download and continue installation' ans
 
     if [[ "$ans" == "Y" || "$ans" == "y" ]]; then
-    cd "$HOME"
     sudo rm -rf ./overwitch
     git clone https://github.com/dagargo/overwitch.git
 
@@ -37,7 +35,7 @@ else
     exit 1
 
     elif [[ "$ans" == "S" || "$ans" == "s" ]]; then
-    echo "Skipping Download, continuing..."
+    echo "Skipping Download. Continuing..."
 
     else 
         echo "Invalid Option. Exiting..."
@@ -74,7 +72,4 @@ cd udev
 
 sudo make install
 
-echo "Done! Ensure you have QJackCtl runnning while overwitch is open."
-
-#Option to launch overwitch-cli
-#overwitch-cli
+echo "Done! It is recommended to restart your system"
