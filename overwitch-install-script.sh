@@ -14,7 +14,7 @@ echo "Thanks, $username! Adding you to the audio group..."
 sudo usermod -aG audio $username
 
 else
-echo "This username does not exist in records. You will have to add yourself to the usergroup manually."
+echo -e "This username does not exist in records. You will have to add yourself to the usergroup manually.\n"
 fi
 
 echo "Downloading repository..."
