@@ -11,7 +11,6 @@ This is a simple Bash script for an easier install of [dagargo's JACK Client for
 - The script will clone the overwitch repository into whichever directory the script is downloaded into.
 - Restart your system to ensure audio user group changes are made.
 
-## After Installation Tip
-- Go into QJackCTL -> Setup -> Misc -> "Start Jack Audio Server on Application Startup" and "Start Minimized on System Tray". This will ensure that the Jack server will run when you log into your computer. When running overwitch on Ubuntu related systems you must have the Jack Client running while overwitch is on. 
+ When running overwitch on Ubuntu related systems you must have the Jack Client also running. You can do this with QJACKCtl.
 
 
